@@ -74,6 +74,7 @@ body {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--primary-gray-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .studio:visited {
     color: var(--secondary-color); 
@@ -88,6 +89,7 @@ body {
     color: var(--primary-lightgray-color);
     display: flex;
     align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-details:hover, 
 .header-details:focus {
@@ -158,6 +160,7 @@ body {
     letter-spacing: 0.06em;
     color: #FFFFFF;
     margin: auto;
+    transition: color 250ms background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover{
@@ -226,6 +229,7 @@ body {
     display: flex;
     padding-top: 50px;
     padding-left: 0px;
+    position: relative;
 }
 .about-list {
     flex-basis: calc((100% - 60px) / 3);
@@ -236,6 +240,18 @@ body {
 }
 .about-img {
     display: block;
+}
+.abut-discription {
+    width: 370px;
+    height: 70px;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--main-color);
+    text-align: center;
+    position: absolute;
+    background-color: rgba(47, 48, 58, 0.8);
+    padding: 27px 107px;
+    top: 275px;
 }
 
 /*Team*/
@@ -278,7 +294,7 @@ body {
     padding-top: 30px;
     margin-right: auto;
 }
-.team-info .name-info {
+.name-info {
     padding-bottom: 0px;
     padding-top: 10px;
     font-size: 16px;
@@ -304,7 +320,6 @@ body {
 }
 .social-lists {
     justify-content: center;
-
 }
 .social-link {
     width: 100%;
@@ -313,6 +328,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-lists .social-link:hover,
 .social-lists .social-link:focus {
@@ -321,6 +337,7 @@ body {
 .social-icon {
     margin: 0;
     fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
@@ -348,6 +365,7 @@ body {
     border-radius: 4px;
     align-items: center;
     justify-content: center;
+    transition: color 250ms border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-icon:hover, 
@@ -480,6 +498,7 @@ body {
     cursor: pointer;
     text-align: center;
     letter-spacing: 0.03em;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-tittle:hover, .button-tittle:focus {
     background-color: var(--secondary-color);
@@ -525,16 +544,40 @@ body {
 .project-column {
     border: 1px solid #EEEEEE;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-column:focus, .project-column:hover {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-
 .project-info {
     text-decoration: none;
+}
+.project-wrapper {
+    position: relative;
+    overflow: hidden;
 }
 .team-img {
     display: block;
     width: 100%;
     height: auto;
+}
+.project-disription {
+    font-size: 18px;
+    line-height: 1.6;
+    width: 100%;
+    color: var(--main-color);
+    background-color: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
+.project-column:hover .project-disription {
+    transform: translateY(0);
 }
